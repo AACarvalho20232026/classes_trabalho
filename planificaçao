@@ -13,7 +13,9 @@ private:                                                |     .status         | 
 .status                                                 |      ID             |       ID          |        ID
     .set status   "dispensavel"                         |       .set ID       |       .set()      |       .set()
     .get status                                         |       .get ID       |       .get        |       .get
-                                                        |    personagem       |     personagem    |        personagem
+.nome                                                   |    personagem       |     personagem    |        personagem
+     .get nome
+     .set nome
 .ID                                                     |     .set per        |      .set         |         .set
   .get id()"se colocar aqui faz em todas as classes"    |     .get per        |      .get         |         .get
   .set id()                                                      2file             3file                  4file
@@ -46,3 +48,41 @@ DORMINDO
 
 
 JOGABILIDADE
+
+Vidente vidente();
+Lobos lobos1(),lobo2()
+Aldeos aldeao1(),aldeao2(),aldeao3(),aldeao4(),aldeao5(),aldeao6(),aldeao7(),aldeao8()
+
+perguntar o nome das pessoas
+struct personagem{
+     int id
+     string nome;
+
+array Vidente vidente[]:{vidente}
+array Lobos lobos[]:{lobo1,lobo2}
+array Aldeao[]:{aldeao1,....2...3}
+     for(...n<7)
+          alde[n],aldeao
+
+
+========================================
+ADORMECER-> CORRE OS ARRAYS TODOS
+     |
+     STATUS == ADORMECIDO
+          |
+          ACORDAR LOBOS     (VERIFICAR V/M)
+               | 
+               MATAR ALDEAO
+                    |
+                    ACORMECER
+                         |
+                         VIDENTE ACORDA(IF VIVA)    - PERGUNTA AO NARRADOR SE A PESSOA ESCOLHIDA É LOBO 
+                              |
+                              ACORMECE VIDENTE
+                                   |
+                                   ACORDA ALDEIA
+                                        |
+                                   MATAR S/N 
+
+SE 2 LOBOS M == ALDEOS VENCEM
+SE ALDEOS M == LOBOS VENCEM

@@ -1,0 +1,48 @@
+Lobo e a aldeia trabalho!!!!!!!!!
+
+Todos classes!
+     lobos 
+    aledeoes
+    vidente
+    narrador
+
+        classe: pai                                           filha                      filha           filha
+classe usando herança para todas as classes             |     lobo            |       vidente     |      aldeao       
+        (commum)                                        |                     |                   | 
+private:                                                |     .status         |        .status    |       .status
+.status                                                 |      ID             |       ID          |        ID
+    .set status   "dispensavel"                         |       .set ID       |       .set()      |       .set()
+    .get status                                         |       .get ID       |       .get        |       .get
+                                                        |    personagem       |     personagem    |        personagem
+.ID                                                     |     .set per        |      .set         |         .set
+  .get id()"se colocar aqui faz em todas as classes"    |     .get per        |      .get         |         .get
+  .set id()                                                      2file             3file                  4file
+               1file 1cpp & 1h                                  1cpp & 1h         1cpp & 1h               1cpp & 1h 
+               
+                                                                1file main
+
+
+
+voto()
+{adormece()
+|
+{acorda()
+
+morre()"influencia o status"
+
+(opcional) class personagem
+
+struct jogador{
+ID
+PERSONAGEM
+STATUS
+}
+
+ENUME {
+VIVO
+MORTE 
+DORMINDO
+}
+
+
+JOGABILIDADE

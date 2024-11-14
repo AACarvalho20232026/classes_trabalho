@@ -37,7 +37,7 @@ int main() {
 
 using namespace std;
 // construtor                              //inicia
-Veiculo::Veiculo(const string& nomeVeiculo) : nome(nomeVeiculo) {
+Veiculo::Veiculo(const string nomeVeiculo) : nome(nomeVeiculo) {
 
 }
 

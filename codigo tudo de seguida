@@ -37,7 +37,9 @@ int main() {
 
 using namespace std;
 // construtor                              //inicia
-Veiculo::Veiculo(const string& nomeVeiculo) : nome(nomeVeiculo) {}
+Veiculo::Veiculo(const string& nomeVeiculo) : nome(nomeVeiculo) {
+
+}
 
 void Veiculo::mostrarDetalhes()  {
     cout << "Veículo: " << nome << endl;
@@ -74,7 +76,9 @@ public:
 
 using namespace std;
 
-Carro::Carro(const string nomeCarro, int portas) : Veiculo(nomeCarro), numeroPortas(portas) {}
+Carro::Carro(const string nomeCarro, int portas) : Veiculo(nomeCarro), numeroPortas(portas) {
+
+}
 
 void Carro::mostrarDetalhes() {
     cout << "Carro: " << nome << ", Número de portas: " << numeroPortas << endl;
@@ -108,7 +112,9 @@ public:
 
 using namespace std;
 
-Moto::Moto(const string nomeMoto, const string guidao) : Veiculo(nomeMoto), tipoGuidao(guidao) {}
+Moto::Moto(const string nomeMoto, const string guidao) : Veiculo(nomeMoto), tipoGuidao(guidao) {
+
+}
 
 void Moto::mostrarDetalhes()  {
     cout << "Moto: " << nome << ", Tipo de guidão: " << tipoGuidao << endl;

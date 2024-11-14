@@ -9,6 +9,6 @@ private:
 
 public:
     Moto(const string& nomeMoto, const string& guidao);
-    void mostrarDetalhes() const;
-    void salvarDetalhes(ofstream& arquivo) const;
+    void mostrarDetalhes() ;
+    void salvarDetalhes(ofstream& arquivo) ;
 };

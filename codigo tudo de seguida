@@ -1,0 +1,138 @@
+//main.cpp
+
+// #include "Veiculo.h" opcional para indicar
+#include "Carro.h"
+#include "Moto.h"
+#include <fstream>
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    Carro carro("Sedan", 4);
+    Moto moto("Esportiva", "Esportivo");
+
+    // Exibir 
+    carro.mostrarDetalhes();
+    moto.mostrarDetalhes();
+
+    // Salvar
+    ofstream arquivo("veiculos.txt");
+    if (arquivo.is_open()) {
+        carro.salvarDetalhes(arquivo);
+        moto.salvarDetalhes(arquivo);
+        arquivo.close();
+        cout << "Detalhes dos veículos salvos em 'veiculos.txt'" << endl;
+    } else {
+        cout << "Erro ao abrir o arquivo!" << endl;
+    }
+
+    return 0;
+}
+
+//Veiculo.cpp
+
+#include "Veiculo.h"
+#include <iostream>
+
+using namespace std;
+// construtor                              //inicia
+Veiculo::Veiculo(const string& nomeVeiculo) : nome(nomeVeiculo) {}
+
+void Veiculo::mostrarDetalhes()  {
+    cout << "Veículo: " << nome << endl;
+}
+
+void Veiculo::salvarDetalhes(ofstream& arquivo)  {
+    arquivo << "Veículo: " << nome << endl;
+}
+
+//Veiculo.h
+
+#ifndef VEICULO_H  //evita erros
+#define VEICULO_H
+
+#include <string>
+#include <fstream>
+
+using namespace std;
+
+class Veiculo {
+protected:  //nao passa para as outras classes
+    string nome;
+
+public:
+    Veiculo(const string& nomeVeiculo);
+    void mostrarDetalhes();
+    void salvarDetalhes(ofstream& arquivo);
+};
+#endif
+
+//Carro.cpp
+
+#include "Carro.h"
+#include <iostream>
+
+using namespace std;
+
+Carro::Carro(const string& nomeCarro, int portas) : Veiculo(nomeCarro), numeroPortas(portas) {}
+
+void Carro::mostrarDetalhes() {
+    cout << "Carro: " << nome << ", Número de portas: " << numeroPortas << endl;
+}
+
+void Carro::salvarDetalhes(ofstream& arquivo) {
+    arquivo << "Carro: " << nome << ", Número de portas: " << numeroPortas << endl;
+}
+
+//Carro.h
+
+#include "Veiculo.h"
+#include <iostream>
+
+using namespace std;
+
+class Carro : public Veiculo {
+private:
+    int numeroPortas;
+
+public:
+    Carro(const string& nomeCarro, int portas);
+    void mostrarDetalhes() ;
+    void salvarDetalhes(ofstream& arquivo);
+};
+
+//Moto.cpp
+
+#include "Moto.h"
+#include <iostream>
+
+using namespace std;
+
+Moto::Moto(const string& nomeMoto, const string& guidao) : Veiculo(nomeMoto), tipoGuidao(guidao) {}
+
+void Moto::mostrarDetalhes() const {
+    cout << "Moto: " << nome << ", Tipo de guidão: " << tipoGuidao << endl;
+}
+
+void Moto::salvarDetalhes(ofstream& arquivo) const {
+    arquivo << "Moto: " << nome << ", Tipo de guidão: " << tipoGuidao << endl;
+}
+
+//Moto.h
+
+#include "Veiculo.h"
+#include <iostream>
+
+using namespace std;
+
+class Moto : public Veiculo {
+private:
+    string tipoGuidao;
+
+public:
+    Moto(const string& nomeMoto, const string& guidao);
+    void mostrarDetalhes() ;
+    void salvarDetalhes(ofstream& arquivo) ;
+};
+

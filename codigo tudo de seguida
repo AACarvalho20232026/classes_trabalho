@@ -61,7 +61,7 @@ protected:  //nao passa para as outras classes
     string nome;
 
 public:
-    Veiculo(const string& nomeVeiculo);
+    Veiculo(const string nomeVeiculo);
     void mostrarDetalhes();
     void salvarDetalhes(ofstream& arquivo);
 };
@@ -74,7 +74,7 @@ public:
 
 using namespace std;
 
-Carro::Carro(const string& nomeCarro, int portas) : Veiculo(nomeCarro), numeroPortas(portas) {}
+Carro::Carro(const string nomeCarro, int portas) : Veiculo(nomeCarro), numeroPortas(portas) {}
 
 void Carro::mostrarDetalhes() {
     cout << "Carro: " << nome << ", Número de portas: " << numeroPortas << endl;
@@ -96,7 +96,7 @@ private:
     int numeroPortas;
 
 public:
-    Carro(const string& nomeCarro, int portas);
+    Carro(const string nomeCarro, int portas);
     void mostrarDetalhes() ;
     void salvarDetalhes(ofstream& arquivo);
 };
@@ -108,7 +108,7 @@ public:
 
 using namespace std;
 
-Moto::Moto(const string& nomeMoto, const string& guidao) : Veiculo(nomeMoto), tipoGuidao(guidao) {}
+Moto::Moto(const string nomeMoto, const string guidao) : Veiculo(nomeMoto), tipoGuidao(guidao) {}
 
 void Moto::mostrarDetalhes()  {
     cout << "Moto: " << nome << ", Tipo de guidão: " << tipoGuidao << endl;
@@ -130,7 +130,7 @@ private:
     string tipoGuidao;
 
 public:
-    Moto(const string& nomeMoto, const string& guidao);
+    Moto(const string nomeMoto, const string guidao);
     void mostrarDetalhes() ;
     void salvarDetalhes(ofstream& arquivo) ;
 };

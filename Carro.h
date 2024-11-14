@@ -9,6 +9,6 @@ private:
 
 public:
     Carro(const string& nomeCarro, int portas);
-    void mostrarDetalhes() const;
+    void mostrarDetalhes() ;
     void salvarDetalhes(ofstream& arquivo);
 };

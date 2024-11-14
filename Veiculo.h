@@ -1,4 +1,4 @@
-#ifndef VEICULO_H
+#ifndef VEICULO_H  //evita erros
 #define VEICULO_H
 
 #include <string>
@@ -7,7 +7,7 @@
 using namespace std;
 
 class Veiculo {
-protected:
+protected:  //nao passa para as outras classes
     string nome;
 
 public:

@@ -2,7 +2,7 @@
 #include <iostream>
 
 using namespace std;
-
+// construtor                              //inicia
 Veiculo::Veiculo(const string& nomeVeiculo) : nome(nomeVeiculo) {}
 
 void Veiculo::mostrarDetalhes()  {

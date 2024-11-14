@@ -1,8 +1,7 @@
 #ifndef VEICULO_H  //evita erros
 #define VEICULO_H
 
-#include <string>
-#include <fstream>
+#include <iostream>
 
 using namespace std;
 

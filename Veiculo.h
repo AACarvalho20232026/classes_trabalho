@@ -12,7 +12,7 @@ protected:
 
 public:
     Veiculo(const string& nomeVeiculo);
-    void mostrarDetalhes() const;
-    void salvarDetalhes(ofstream& arquivo) const;
+    void mostrarDetalhes();
+    void salvarDetalhes(ofstream& arquivo);
 };
 #endif

@@ -1,4 +1,4 @@
-#include "Veiculo.h"
+// #include "Veiculo.h" opcional para indicar
 #include "Carro.h"
 #include "Moto.h"
 #include <fstream>
@@ -10,11 +10,11 @@ int main() {
     Carro carro("Sedan", 4);
     Moto moto("Esportiva", "Esportivo");
 
-    // Exibir detalhes diretamente no console
+    // Exibir 
     carro.mostrarDetalhes();
     moto.mostrarDetalhes();
 
-    // Salvar detalhes em um arquivo
+    // Salvar
     ofstream arquivo("veiculos.txt");
     if (arquivo.is_open()) {
         carro.salvarDetalhes(arquivo);

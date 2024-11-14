@@ -10,7 +10,8 @@ protected:  //nao passa para as outras classes
     string nome;
 
 public:
-    Veiculo(const string& nomeVeiculo);
+        //construtor
+    Veiculo(const string nomeVeiculo);
     void mostrarDetalhes();
     void salvarDetalhes(ofstream& arquivo);
 };
